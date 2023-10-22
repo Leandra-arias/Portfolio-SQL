@@ -1,0 +1,15 @@
+-- VISUALIZAMOS toda nuestra tabla con los datos importados
+SELECT * FROM citybikes;
+
+-- BORRADO DE DATOS INCOLCLUSOS, NULOS O VALORE CERO
+DELETE FROM citybikes
+WHERE age=0 AND season='Season';
+
+-- VISUALIZAMOS NOMBRE DE ESTACIONES DE PARTIDA Y LLEGADA 
+SELECT start_station_name, end_station_name FROM citybikes;
+
+-- CONTEO DE LOS DIAS DE LA SEMANA DONDE SE USA EL SERVICIO
+SELECT weekday, COUNT(*) AS CONTEO_DIAS
+FROM citybikes
+GROUP BY weekday
+ORDER BY CONTEO_DIAS ASC;
