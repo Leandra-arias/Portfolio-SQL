@@ -75,3 +75,15 @@ GROUP BY weekday, age DESC;
 SELECT * FROM citybikes
 WHERE age BETWEEN 31 AND 45;
 
+-- UTILIZAR PATRON DE BUSQUEDA
+SELECT *
+FROM citybikes
+WHERE start_station_name LIKE '%Ha%';
+
+-- CREAR VISTA DE MI TABLA
+CREATE VIEW CITYBIKENY AS
+SELECT start_station_name, end_station_name, user_type, season
+FROM citybikes
+WHERE age>50;
+
+-- THANK YOU FOR WATCHING :)
