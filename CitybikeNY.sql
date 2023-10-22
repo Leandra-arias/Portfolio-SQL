@@ -80,6 +80,14 @@ SELECT *
 FROM citybikes
 WHERE start_station_name LIKE '%Ha%';
 
+SELECT *
+FROM citybikes
+WHERE end_station_name LIKE '%la%';
+
+SELECT *
+FROM citybikes
+WHERE star_station_id LIKE '34';
+
 -- CREAR VISTA DE MI TABLA
 CREATE VIEW CITYBIKENY AS
 SELECT start_station_name, end_station_name, user_type, season
